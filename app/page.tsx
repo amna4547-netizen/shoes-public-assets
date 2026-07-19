@@ -313,7 +313,7 @@ export default function Home() {
             <div className="w-24 h-[1px] bg-zinc-300 mx-auto lg:mx-0"></div>
             <div className="space-y-6 md:space-y-8">
               <p className="text-zinc-800 leading-relaxed font-sans text-lg md:text-xl italic font-medium">"We believe in the soul of the stitch and the character of the sole."</p>
-              <p className="text-zinc-500 leading-loose font-sans text-sm md:text-[15px] max-w-md mx-auto lg:mx-0">Founded in 2026, **Stitch & Sole** was born from a desire to bring back the lost art of handmade footwear with a modern twist.</p>
+              <p className="text-zinc-500 leading-loose font-sans text-sm md:text-[15px] max-w-md mx-auto lg:mx-0">**Stitch & Sole** was born from a desire to bring back the lost art of handmade footwear with a modern twist.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6 border-t border-zinc-100 text-left">
               <div className="space-y-2">
