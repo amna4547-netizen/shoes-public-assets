@@ -212,21 +212,14 @@ export default function Home() {
                 />
               </span>
             </div>
-            <p className="text-white/80 text-[10px] md:text-xs mb-6 font-sans max-w-xl mx-auto leading-relaxed italic uppercase tracking-[0.3em] md:tracking-[0.4em] px-2 drop-shadow">
+            <p className="text-white/60 text-[10px] md:text-xs mb-8 font-sans max-w-xl mx-auto leading-relaxed italic uppercase tracking-[0.3em] md:tracking-[0.4em] px-2">
               Curated collections for the urban explorer. <br className="hidden sm:block"/> 
               Discover the art of every step.
             </p>
-            <div className="flex flex-col items-center gap-6">
-              <Link href="#collections" className="border border-white/30 text-white px-8 md:px-10 py-3 text-[9px] md:text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-700 backdrop-blur-md shadow-lg">
+            <div className="flex flex-col items-center gap-4">
+              <Link href="#collections" className="border border-white/20 text-white px-8 md:px-10 py-3 text-[9px] md:text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-700 backdrop-blur-sm">
                 Explore Collections
               </Link>
-              
-              {/* Moving Down Bounce Arrow */}
-              <div className="animate-bounce mt-2">
-                <svg width="24" height="40" viewBox="0 0 24 48" fill="none">
-                  <path d="M12 0V35M12 35L5 28M12 35L19 28" stroke="#B5A48B" strokeWidth="1.5" />
-                </svg>
-              </div>
             </div>
           </div>
         </div>
@@ -287,7 +280,7 @@ export default function Home() {
           <div className="relative flex items-center h-[320px] md:h-[500px] w-full">
             <div className="relative w-[80%] h-full z-10 shadow-xl overflow-hidden border-4 border-white ml-4 md:ml-12">
               <img 
-                src="/pairs.jpeg" 
+                src="/pairs.png" 
                 alt="pair" 
                 className="w-full h-full object-cover" 
               />
