@@ -358,40 +358,73 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. ABOUT US / HERITAGE SECTION */}
+     {/* 5. ABOUT US / HERITAGE SECTION */}
       <section id="about" className="bg-[#FDFCF9] py-14 md:py-20 px-6 md:px-12 relative overflow-hidden border-t border-zinc-100 scroll-mt-20">
         <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none">
           <h2 className="text-[20vw] font-black leading-none uppercase tracking-tighter text-zinc-400">About <br /> Us</h2>
         </div>
+        
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
+          
+          {/* Text Content */}
           <div className="space-y-6 lg:pr-6 order-2 lg:order-1 text-center lg:text-left">
             <div className="space-y-3">
-              <h2 className="text-3xl md:text-5xl font-light tracking-tighter uppercase text-zinc-900 leading-[0.95]">Our <br /> <span className="italic font-serif text-[#B5A48B]">Heritage</span></h2>
+              <h2 className="text-3xl md:text-5xl font-light tracking-tighter uppercase text-zinc-900 leading-[0.95]">
+                Our <br /> <span className="italic font-serif text-[#B5A48B]">Heritage</span>
+              </h2>
             </div>
+            
             <div className="w-16 h-[1px] bg-zinc-300 mx-auto lg:mx-0"></div>
+            
             <div className="space-y-4">
-              <p className="text-zinc-800 leading-relaxed font-sans text-base md:text-lg italic font-medium">"We believe in the soul of the stitch and the endurance of fine leather."</p>
-              <p className="text-zinc-500 leading-relaxed font-sans text-xs md:text-sm max-w-md mx-auto lg:mx-0">**EFSteps & Stitch & Sole** was born from a passion to master artisanal outerwear and footwear, crafting timeless leather pieces with uncompromising precision.</p>
+              <p className="text-zinc-800 leading-relaxed font-sans text-base md:text-lg italic font-medium">
+                "We believe in the soul of the stitch and the endurance of fine leather."
+              </p>
+              <p className="text-zinc-500 leading-relaxed font-sans text-xs md:text-sm max-w-md mx-auto lg:mx-0">
+                <span className="font-semibold text-zinc-800">EFSteps & Stitch & Sole</span> was born from a passion to master artisanal leather outerwear. Every jacket is tailored to withstand extreme elements while maintaining an unmatched luxury silhouette.
+              </p>
             </div>
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-zinc-100 text-left">
               <div className="space-y-1">
-                <h4 className="text-[10px] font-black tracking-widest uppercase text-zinc-900">Master Stitching</h4>
-                <p className="text-[10px] text-zinc-400 leading-relaxed uppercase">Each jacket is handcrafted by expert leather artisans.</p>
+                <h4 className="text-[10px] font-black tracking-widest uppercase text-zinc-900">Master Tailoring</h4>
+                <p className="text-[10px] text-zinc-400 leading-relaxed uppercase">Hand-stitched leather panels built for lifetime elegance.</p>
               </div>
               <div className="space-y-1">
-                <h4 className="text-[10px] font-black tracking-widest uppercase text-zinc-900">Full-Grain Quality</h4>
-                <p className="text-[10px] text-zinc-400 leading-relaxed uppercase">Sourced from premium hides for lifelong durability.</p>
+                <h4 className="text-[10px] font-black tracking-widest uppercase text-zinc-900">Full-Grain Hides</h4>
+                <p className="text-[10px] text-zinc-400 leading-relaxed uppercase">Sourced from top-tier tanneries for supreme durability.</p>
               </div>
             </div>
           </div>
           
+          {/* Layered Modern Dual Image Display */}
           <div className="relative order-1 lg:order-2 max-w-md mx-auto lg:max-w-none w-full">
-            <div className="aspect-[3/4] w-full border-[8px] border-white shadow-xl relative z-10 overflow-hidden bg-zinc-100">
-              <Image src="/img6.png" alt="Artisan" fill className="object-cover hover:scale-105 transition-transform duration-1000" unoptimized />
+            {/* Main Primary Image */}
+            <div className="aspect-[3/4] w-full border-[8px] md:border-[12px] border-white shadow-2xl relative z-10 overflow-hidden bg-zinc-100">
+              <Image 
+                src="/jacket5.jpg" 
+                alt="Signature Leather Jacket Crafting" 
+                fill 
+                className="object-cover hover:scale-105 transition-transform duration-1000" 
+                unoptimized 
+              />
+            </div>
+            
+            {/* Overlapping Secondary Image */}
+            <div className="absolute -bottom-4 -left-2 md:-bottom-8 md:-left-6 w-1/2 aspect-square border-4 md:border-8 border-white shadow-xl z-20 overflow-hidden bg-white">
+              <Image 
+                src="/jacket6.jpg" 
+                alt="Premium Outerwear Detail" 
+                fill 
+                className="object-cover hover:scale-110 transition-transform duration-700" 
+                unoptimized 
+              />
             </div>
           </div>
+
         </div>
       </section>
+      
 
       {/* 6. FOOTER */}
       <footer id="contact" className="bg-[#1A1A1A] text-white py-14 md:py-20 px-6 md:px-12 relative z-30 scroll-mt-20">
