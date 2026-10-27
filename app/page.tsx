@@ -212,20 +212,27 @@ export default function Home() {
                 />
               </span>
             </div>
-            <p className="text-white/80 text-[10px] md:text-xs mb-8 font-sans max-w-xl mx-auto leading-relaxed italic uppercase tracking-[0.3em] md:tracking-[0.4em] px-2 drop-shadow">
+            <p className="text-white/80 text-[10px] md:text-xs mb-6 font-sans max-w-xl mx-auto leading-relaxed italic uppercase tracking-[0.3em] md:tracking-[0.4em] px-2 drop-shadow">
               Curated collections for the urban explorer. <br className="hidden sm:block"/> 
               Discover the art of every step.
             </p>
-            <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-col items-center gap-6">
               <Link href="#collections" className="border border-white/30 text-white px-8 md:px-10 py-3 text-[9px] md:text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-700 backdrop-blur-md shadow-lg">
                 Explore Collections
               </Link>
+              
+              {/* Moving Down Bounce Arrow */}
+              <div className="animate-bounce mt-2">
+                <svg width="24" height="40" viewBox="0 0 24 48" fill="none">
+                  <path d="M12 0V35M12 35L5 28M12 35L19 28" stroke="#B5A48B" strokeWidth="1.5" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </header>
 
-      {/* 3. FEATURED ARRIVALS */}
+      {/* 3. FEATURED ARRIVALS (Exact Uniform Image Scaling) */}
       <section id="collections" className="py-14 md:py-20 px-6 md:px-12 relative bg-[#F9F7F2] overflow-hidden scroll-mt-20">
         <div className="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-[0.06] py-12 select-none">
           <span className="text-[18vw] font-black tracking-tighter -ml-10 leading-none text-zinc-400">SEASONAL</span>
@@ -250,11 +257,12 @@ export default function Home() {
             ].map((item) => (
               <Link href={item.slug} key={item.id} className="group cursor-pointer flex flex-col h-full">
                 <div className="relative aspect-[3/4.5] w-full border border-zinc-200 transition-all duration-300 overflow-hidden bg-[#E8E4D9] flex flex-col justify-between">
-                  <div className="relative w-full h-[68%] flex items-center justify-center p-3">
+                  {/* Uniform Image Height Container matching Cowboy Boot scale */}
+                  <div className="relative w-full h-[68%] flex items-center justify-center p-6">
                     <img 
                       src={item.img} 
                       alt={item.name} 
-                      className="w-full h-full object-contain scale-[1.15] group-hover:scale-[1.35] transition-transform duration-500 mix-blend-multiply z-10" 
+                      className="w-full h-full object-contain scale-[0.95] group-hover:scale-[1.1] transition-transform duration-500 mix-blend-multiply z-10" 
                     />
                   </div>
                   <div className="relative w-full h-24 p-4 border-t border-white/40 bg-white/10 backdrop-blur-[2px] z-30 flex flex-col justify-center space-y-1">
@@ -279,14 +287,14 @@ export default function Home() {
           <div className="relative flex items-center h-[320px] md:h-[500px] w-full">
             <div className="relative w-[80%] h-full z-10 shadow-xl overflow-hidden border-4 border-white ml-4 md:ml-12">
               <img 
-                src="/craft.jpg" 
-                alt="Craft" 
+                src="/pairs.jpeg" 
+                alt="pair" 
                 className="w-full h-full object-cover" 
               />
             </div>
             <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[42%] flex flex-col gap-4 z-20">
               <div className="bg-[#D3CDC4]/95 backdrop-blur-md p-6 aspect-square flex flex-col justify-center items-center shadow-xl border border-white/50">
-                <span className="text-2xl md:text-3xl mb-2">♻️</span>
+                <span className="text-2xl md:text-3xl mb-2">craft.jpg</span>
                 <p className="text-[9px] md:text-[10px] uppercase font-black tracking-[0.2em] text-zinc-800 text-center leading-tight">Ethically <br/> Recycled</p>
               </div>
             </div>
@@ -327,16 +335,16 @@ export default function Home() {
             {[
               { id: 1, name: "The Men's Leather Jackets", desc: "Classic Aviator Fit", img: "/jacket1.jpg", slug: "/Collections/bomber" },
               { id: 2, name: "The Cow Boy Jackets", desc: "Premium Velvet Touch", img: "/cow boy.jpg", slug: "/Collections/suede" },
-              { id: 3, name: "HERITAGE LEATHER JACKET", desc: "Pure Distressed Grain", img: "/woman jacket10.jpg", slug: "/Collections/leather" },
-              { id: 4, name: "WINTER Cow Women Jackets SHELL", desc: "Thermal Insulated Shield", img: "/cow woman2.jpg", slug: "/Collections/parka" }
+              { id: 3, name: "HERITAGE LEATHER JACKET", desc: "Pure Distressed Grain", img: "/women jacket10.jpg", slug: "/Collections/leather" },
+              { id: 4, name: "WINTER Cow Women Jackets SHELL", desc: "Thermal Insulated Shield", img: "/cow women2.jpg", slug: "/Collections/parka" }
             ].map((jacket) => (
               <Link href={jacket.slug} key={jacket.id} className="group cursor-pointer flex flex-col h-full">
                 <div className="relative aspect-[3/4.5] w-full border border-zinc-300 transition-all duration-300 overflow-hidden bg-[#E3DFD5] shadow-sm group-hover:shadow-xl group-hover:border-[#B5A48B] flex flex-col justify-between">
-                  <div className="relative w-full h-[68%] flex items-center justify-center p-3">
+                  <div className="relative w-full h-[68%] flex items-center justify-center p-6">
                     <img 
                       src={jacket.img} 
                       alt={jacket.name} 
-                      className="w-full h-full object-contain scale-[1.05] group-hover:scale-[1.2] transition-transform duration-500 mix-blend-multiply z-10" 
+                      className="w-full h-full object-contain scale-[0.95] group-hover:scale-[1.1] transition-transform duration-500 mix-blend-multiply z-10" 
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&auto=format&fit=crop&q=60";
                         (e.target as HTMLImageElement).className = "w-full h-full object-cover transition-transform duration-500";
@@ -358,7 +366,7 @@ export default function Home() {
         </div>
       </section>
 
-     {/* 5. ABOUT US / HERITAGE SECTION */}
+      {/* 5. ABOUT US / HERITAGE SECTION */}
       <section id="about" className="bg-[#FDFCF9] py-14 md:py-20 px-6 md:px-12 relative overflow-hidden border-t border-zinc-100 scroll-mt-20">
         <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none">
           <h2 className="text-[20vw] font-black leading-none uppercase tracking-tighter text-zinc-400">About <br /> Us</h2>
@@ -366,7 +374,6 @@ export default function Home() {
         
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
           
-          {/* Text Content */}
           <div className="space-y-6 lg:pr-6 order-2 lg:order-1 text-center lg:text-left">
             <div className="space-y-3">
               <h2 className="text-3xl md:text-5xl font-light tracking-tighter uppercase text-zinc-900 leading-[0.95]">
@@ -397,9 +404,7 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Layered Modern Dual Image Display */}
           <div className="relative order-1 lg:order-2 max-w-md mx-auto lg:max-w-none w-full">
-            {/* Main Primary Image */}
             <div className="aspect-[3/4] w-full border-[8px] md:border-[12px] border-white shadow-2xl relative z-10 overflow-hidden bg-zinc-100">
               <Image 
                 src="/jacket5.jpg" 
@@ -410,7 +415,6 @@ export default function Home() {
               />
             </div>
             
-            {/* Overlapping Secondary Image */}
             <div className="absolute -bottom-4 -left-2 md:-bottom-8 md:-left-6 w-1/2 aspect-square border-4 md:border-8 border-white shadow-xl z-20 overflow-hidden bg-white">
               <Image 
                 src="/jacket4.jpg" 
@@ -425,7 +429,6 @@ export default function Home() {
         </div>
       </section>
       
-
       {/* 6. FOOTER */}
       <footer id="contact" className="bg-[#1A1A1A] text-white py-14 md:py-20 px-6 md:px-12 relative z-30 scroll-mt-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
