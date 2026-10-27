@@ -255,13 +255,27 @@ export default function Home() {
         </div>
       </section>
 
-      
-      {/* PREMIUM JACKETS SECTION */}
-      <section id="jackets" className="py-20 md:py-32 px-6 md:px-12 relative bg-[#E9E9E9] overflow-hidden scroll-mt-20 border-t border-zinc-300">
+      {/* PREMIUM JACKETS SECTION (REDESIGNED WITH LUXURY DARK VIBE & WATERMARK) */}
+      <section id="jackets" className="py-24 md:py-36 px-6 md:px-12 relative bg-[#141414] text-white overflow-hidden scroll-mt-20 border-t border-b border-zinc-800">
+        {/* Background Watermark & Glow Effects */}
+        <div className="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-[0.03] select-none py-12">
+          <span className="text-[22vw] font-black tracking-tighter -ml-10 leading-none">PREMIUM</span>
+          <span className="text-[22vw] font-black tracking-tighter self-end -mr-10 leading-none">LEATHER</span>
+        </div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#B5A48B]/10 blur-[120px] rounded-full pointer-events-none"></div>
+
         <div className="max-w-[1440px] mx-auto relative z-10">
-          <h2 className="text-3xl md:text-4xl mb-16 tracking-tighter uppercase text-zinc-800 font-medium text-center md:text-left">
-            Premium Jackets
-          </h2>
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 text-center md:text-left">
+            <div>
+              <span className="text-[#B5A48B] text-[10px] font-bold tracking-[0.5em] uppercase block mb-3">Signature Outerwear</span>
+              <h2 className="text-3xl md:text-5xl tracking-tighter uppercase font-light text-white">
+                Premium <span className="italic font-serif text-[#B5A48B]">Jackets</span>
+              </h2>
+            </div>
+            <p className="text-zinc-400 text-xs tracking-widest uppercase max-w-xs mx-auto md:mx-0 font-sans">
+              Hand-finished artisanal leather & rugged weather shells engineered for timeless style.
+            </p>
+          </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 items-start">
             {[
@@ -271,27 +285,27 @@ export default function Home() {
               { id: 4, name: "WINTER Cow Women Jackets SHELL", desc: "Thermal Insulated Shield", img: "/cow women1.jpg", slug: "/Collections/parka" }
             ].map((jacket) => (
               <Link href={jacket.slug} key={jacket.id} className="group cursor-pointer flex flex-col">
-                <div className="relative aspect-[3/4.8] w-full mb-6 border-[1px] border-zinc-300 transition-all duration-300 overflow-hidden bg-[#F2EFE9]">
+                <div className="relative aspect-[3/4.8] w-full mb-4 border border-zinc-800 transition-all duration-500 overflow-hidden bg-[#1E1E1E] group-hover:border-[#B5A48B]/50 group-hover:shadow-[0_10px_30px_rgba(181,164,139,0.15)]">
                   <div className="relative w-full h-[75%] overflow-visible flex items-center justify-center p-4">
                     <img 
                       src={jacket.img} 
                       alt={jacket.name} 
-                      className="w-full h-full object-contain scale-[1.05] group-hover:scale-[1.2] transition-transform duration-500 mix-blend-multiply z-10" 
+                      className="w-full h-full object-contain scale-[1.05] group-hover:scale-[1.18] transition-transform duration-700 mix-blend-lighten z-10 filter brightness-95" 
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&auto=format&fit=crop&q=60";
                         (e.target as HTMLImageElement).className = "w-full h-full object-cover transition-transform duration-500";
                       }}
                     />
                   </div>
-                  <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 z-30 space-y-1">
-                    <h3 className="font-bold text-[10px] md:text-[11px] tracking-[0.2em] text-zinc-900 uppercase">
+                  <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 z-30 space-y-1 bg-gradient-to-t from-black via-black/80 to-transparent pt-8">
+                    <h3 className="font-bold text-[10px] md:text-[11px] tracking-[0.2em] text-white uppercase group-hover:text-[#B5A48B] transition-colors">
                       {jacket.name}
                     </h3>
-                    <p className="text-[9px] md:text-[10px] text-zinc-600 font-light tracking-wide italic leading-tight">
+                    <p className="text-[9px] md:text-[10px] text-zinc-400 font-light tracking-wide italic leading-tight">
                       {jacket.desc}
                     </p>
                   </div>
-                  <div className="absolute bottom-3 left-3 right-3 h-20 border border-white/40 backdrop-blur-[2px] bg-white/10 z-20 shadow-inner"></div>
+                  <div className="absolute inset-0 border border-white/5 pointer-events-none"></div>
                 </div>
               </Link>
             ))}
