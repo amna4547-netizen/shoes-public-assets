@@ -38,7 +38,7 @@ export default function Home() {
       
       {/* 1. NAVIGATION BAR */}
       <nav className="flex items-center justify-between px-6 md:px-12 py-4 bg-[#E9E9E9] sticky top-0 z-[100] border-b border-zinc-200">
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-8 lg:gap-12">
           <div 
             className="flex flex-col items-center leading-none group cursor-pointer" 
             onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
@@ -46,7 +46,7 @@ export default function Home() {
             <img
               src="/icon.jpeg" 
               alt="EF & Steps Icon"
-              className="h-12 md:h-20 w-auto mb-2 opacity-90 group-hover:opacity-100 transition-all duration-300" 
+              className="h-12 md:h-16 w-auto mb-2 opacity-90 group-hover:opacity-100 transition-all duration-300" 
             />
             <div className="flex flex-col items-center">
               <span className="text-[10px] font-medium tracking-[0.5em] uppercase text-zinc-800 group-hover:text-[#B5A48B] transition-colors duration-300 italic">
@@ -56,35 +56,73 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hidden md:flex gap-10 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-500">
-            <a href="#collections" className="hover:text-black transition-colors">Collections</a>
-            <a href="#jackets" className="hover:text-black transition-colors">Jackets</a>
-            <a href="#about" className="hover:text-black transition-colors">About Us</a>
-            <a href="#craft" className="hover:text-black transition-colors">Craft</a>
-            <a href="#contact" className="hover:text-black transition-colors">Contact</a>
+          {/* Desktop Navigation Links with Dropdowns */}
+          <div className="hidden lg:flex gap-8 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-600 items-center">
+            
+            {/* Collections Dropdown */}
+            <div className="relative group py-2">
+              <button className="hover:text-black flex items-center gap-1 transition-colors">
+                Collections ▾
+              </button>
+              <div className="absolute top-full left-0 w-56 bg-[#F9F7F2] border border-zinc-200 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 flex flex-col gap-2 px-4 z-50">
+                <a href="#collections" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Seasonal Favourites</a>
+                <a href="#jackets" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Premium Jackets</a>
+              </div>
+            </div>
+
+            {/* Products Dropdown */}
+            <div className="relative group py-2">
+              <button className="hover:text-black flex items-center gap-1 transition-colors">
+                Products ▾
+              </button>
+              <div className="absolute top-full left-0 w-56 bg-[#F9F7F2] border border-zinc-200 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 flex flex-col gap-2 px-4 z-50">
+                <a href="#collections" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Footwear Series</a>
+                <a href="#jackets" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Outerwear & Shells</a>
+              </div>
+            </div>
+
+            {/* Resources Dropdown */}
+            <div className="relative group py-2">
+              <button className="hover:text-black flex items-center gap-1 transition-colors">
+                Resources ▾
+              </button>
+              <div className="absolute top-full left-0 w-56 bg-[#F9F7F2] border border-zinc-200 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 flex flex-col gap-2 px-4 z-50">
+                <a href="#craft" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Craft & Process</a>
+                <a href="#craft" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Sustainability</a>
+              </div>
+            </div>
+
+            {/* Company Dropdown */}
+            <div className="relative group py-2">
+              <button className="hover:text-black flex items-center gap-1 transition-colors">
+                Company ▾
+              </button>
+              <div className="absolute top-full left-0 w-56 bg-[#F9F7F2] border border-zinc-200 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 flex flex-col gap-2 px-4 z-50">
+                <a href="#about" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">About Us</a>
+                <a href="#about" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Our Heritage</a>
+                <a href="#about" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Master Craftsmanship</a>
+              </div>
+            </div>
+
+            <a href="#contact" className="hover:text-black transition-colors py-2">Contact</a>
           </div>
         </div>
 
-        <div className="flex items-center gap-4 md:gap-10">
-          <div className="flex gap-4 md:gap-6 text-zinc-600 items-center">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="cursor-pointer hover:text-black">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        <div className="flex items-center gap-4 md:gap-8">
+          <a href="#contact" className="hidden sm:block text-zinc-700 hover:text-black transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="cursor-pointer">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
             </svg>
-            <a href="#contact" className="hover:text-black transition-colors">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="cursor-pointer">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
-            </a>
-          </div>
-          <a href="#collections" className="hidden sm:block border border-[#B5A48B] px-6 md:px-10 py-3 text-[10px] uppercase tracking-[0.3em] font-bold text-[#B5A48B] hover:bg-[#B5A48B] hover:text-white transition-all duration-500">
+          </a>
+          <a href="#collections" className="hidden sm:block border border-[#B5A48B] px-6 py-2.5 text-[10px] uppercase tracking-[0.3em] font-bold text-[#B5A48B] hover:bg-[#B5A48B] hover:text-white transition-all duration-500">
             Explore
           </a>
           
-          {/* Mobile Menu Button */}
-          <button onClick={() => setMenuOpen(!menuOpen)} className="block md:hidden text-zinc-800 focus:outline-none">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          {/* Mobile Menu Button with Icon */}
+          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden flex items-center gap-2 bg-zinc-200/80 px-3 py-2 text-zinc-800 rounded-sm focus:outline-none">
+            <span className="text-[9px] uppercase tracking-widest font-bold">Menu</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               {menuOpen ? (
                 <path d="M18 6L6 18M6 6l12 12" />
               ) : (
@@ -97,12 +135,38 @@ export default function Home() {
 
       {/* Mobile Drawer Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#E9E9E9] border-b border-zinc-200 py-4 px-6 flex flex-col gap-4 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-500 sticky top-[81px] z-[99]">
-          <a href="#collections" onClick={() => setMenuOpen(false)} className="hover:text-black transition-colors py-1">Collections</a>
-          <a href="#jackets" onClick={() => setMenuOpen(false)} className="hover:text-black transition-colors py-1">Jackets</a>
-          <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-black transition-colors py-1">About Us</a>
-          <a href="#craft" onClick={() => setMenuOpen(false)} className="hover:text-black transition-colors py-1">Craft</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-black transition-colors py-1">Contact</a>
+        <div className="lg:hidden bg-[#E9E9E9] border-b border-zinc-200 py-6 px-6 flex flex-col gap-5 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-600 sticky top-[73px] z-[99] shadow-lg max-h-[80vh] overflow-y-auto">
+          
+          {/* Collections Section */}
+          <div className="flex flex-col gap-2">
+            <span className="text-[#B5A48B] font-bold text-[10px] tracking-[0.3em]">Collections</span>
+            <a href="#collections" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Seasonal Favourites</a>
+            <a href="#jackets" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Premium Jackets</a>
+          </div>
+
+          {/* Products Section */}
+          <div className="flex flex-col gap-2">
+            <span className="text-[#B5A48B] font-bold text-[10px] tracking-[0.3em]">Products</span>
+            <a href="#collections" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Footwear Series</a>
+            <a href="#jackets" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Outerwear & Shells</a>
+          </div>
+
+          {/* Resources Section (Craft included) */}
+          <div className="flex flex-col gap-2">
+            <span className="text-[#B5A48B] font-bold text-[10px] tracking-[0.3em]">Resources</span>
+            <a href="#craft" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Craft & Process</a>
+            <a href="#craft" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Sustainability</a>
+          </div>
+
+          {/* Company Section (About Us included) */}
+          <div className="flex flex-col gap-2">
+            <span className="text-[#B5A48B] font-bold text-[10px] tracking-[0.3em]">Company</span>
+            <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">About Us</a>
+            <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Our Heritage</a>
+            <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Master Craftsmanship</a>
+          </div>
+
+          <a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-black py-2 border-t border-zinc-300 font-bold">Contact</a>
         </div>
       )}
 
@@ -203,7 +267,6 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* 4. CRAFT & SUSTAINABILITY */}
       <section id="craft" className="bg-white py-20 md:py-32 px-6 md:px-12 relative z-20 overflow-hidden scroll-mt-20">
         <div className="absolute top-0 right-0 w-full lg:w-1/3 h-full bg-[#F9F7F2] -z-10"></div>
@@ -255,24 +318,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PREMIUM JACKETS SECTION (REDESIGNED WITH LUXURY DARK VIBE & WATERMARK) */}
-      <section id="jackets" className="py-24 md:py-36 px-6 md:px-12 relative bg-[#141414] text-white overflow-hidden scroll-mt-20 border-t border-b border-zinc-800">
-        {/* Background Watermark & Glow Effects */}
+      {/* PREMIUM JACKETS SECTION */}
+      <section id="jackets" className="py-20 md:py-32 px-6 md:px-12 relative bg-[#EFECE6] text-zinc-900 overflow-hidden scroll-mt-20 border-t border-b border-zinc-200">
         <div className="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-[0.03] select-none py-12">
           <span className="text-[22vw] font-black tracking-tighter -ml-10 leading-none">PREMIUM</span>
-          <span className="text-[22vw] font-black tracking-tighter self-end -mr-10 leading-none">LEATHER</span>
+          <span className="text-[22vw] font-black tracking-tighter self-end -mr-10 leading-none">OUTERWEAR</span>
         </div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#B5A48B]/10 blur-[120px] rounded-full pointer-events-none"></div>
 
         <div className="max-w-[1440px] mx-auto relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 text-center md:text-left">
             <div>
               <span className="text-[#B5A48B] text-[10px] font-bold tracking-[0.5em] uppercase block mb-3">Signature Outerwear</span>
-              <h2 className="text-3xl md:text-5xl tracking-tighter uppercase font-light text-white">
+              <h2 className="text-3xl md:text-5xl tracking-tighter uppercase font-light text-zinc-900">
                 Premium <span className="italic font-serif text-[#B5A48B]">Jackets</span>
               </h2>
             </div>
-            <p className="text-zinc-400 text-xs tracking-widest uppercase max-w-xs mx-auto md:mx-0 font-sans">
+            <p className="text-zinc-600 text-xs tracking-widest uppercase max-w-xs mx-auto md:mx-0 font-sans">
               Hand-finished artisanal leather & rugged weather shells engineered for timeless style.
             </p>
           </div>
@@ -285,27 +346,27 @@ export default function Home() {
               { id: 4, name: "WINTER Cow Women Jackets SHELL", desc: "Thermal Insulated Shield", img: "/cow women1.jpg", slug: "/Collections/parka" }
             ].map((jacket) => (
               <Link href={jacket.slug} key={jacket.id} className="group cursor-pointer flex flex-col">
-                <div className="relative aspect-[3/4.8] w-full mb-4 border border-zinc-800 transition-all duration-500 overflow-hidden bg-[#1E1E1E] group-hover:border-[#B5A48B]/50 group-hover:shadow-[0_10px_30px_rgba(181,164,139,0.15)]">
+                <div className="relative aspect-[3/4.8] w-full mb-6 border-[1px] border-zinc-300 transition-all duration-300 overflow-hidden bg-[#E3DFD5] shadow-sm group-hover:shadow-xl group-hover:border-[#B5A48B]">
                   <div className="relative w-full h-[75%] overflow-visible flex items-center justify-center p-4">
                     <img 
                       src={jacket.img} 
                       alt={jacket.name} 
-                      className="w-full h-full object-contain scale-[1.05] group-hover:scale-[1.18] transition-transform duration-700 mix-blend-lighten z-10 filter brightness-95" 
+                      className="w-full h-full object-contain scale-[1.05] group-hover:scale-[1.2] transition-transform duration-500 mix-blend-multiply z-10" 
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&auto=format&fit=crop&q=60";
                         (e.target as HTMLImageElement).className = "w-full h-full object-cover transition-transform duration-500";
                       }}
                     />
                   </div>
-                  <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 z-30 space-y-1 bg-gradient-to-t from-black via-black/80 to-transparent pt-8">
-                    <h3 className="font-bold text-[10px] md:text-[11px] tracking-[0.2em] text-white uppercase group-hover:text-[#B5A48B] transition-colors">
+                  <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 z-30 space-y-1 bg-[#E3DFD5]/90 backdrop-blur-sm">
+                    <h3 className="font-bold text-[10px] md:text-[11px] tracking-[0.2em] text-zinc-900 uppercase group-hover:text-[#B5A48B] transition-colors">
                       {jacket.name}
                     </h3>
-                    <p className="text-[9px] md:text-[10px] text-zinc-400 font-light tracking-wide italic leading-tight">
+                    <p className="text-[9px] md:text-[10px] text-zinc-600 font-light tracking-wide italic leading-tight">
                       {jacket.desc}
                     </p>
                   </div>
-                  <div className="absolute inset-0 border border-white/5 pointer-events-none"></div>
+                  <div className="absolute bottom-3 left-3 right-3 h-20 border border-white/60 backdrop-blur-[2px] bg-white/20 z-20 shadow-inner pointer-events-none"></div>
                 </div>
               </Link>
             ))}
@@ -375,7 +436,7 @@ export default function Home() {
               <p className="italic text-zinc-400 text-sm border-l border-[#B5A48B] pl-6 max-w-xs mx-auto lg:mx-0 text-center lg:text-left">
                 "Every pair tells a story of craftsmanship and dedication."
               </p>
-  
+ 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input name="name" type="text" placeholder="NAME" required className="bg-transparent border border-white/10 p-4 text-[10px] outline-none focus:border-[#B5A48B] transition-colors w-full" />
                 <input name="email" type="email" placeholder="EMAIL" required className="bg-transparent border border-white/10 p-4 text-[10px] outline-none focus:border-[#B5A48B] transition-colors w-full" />
