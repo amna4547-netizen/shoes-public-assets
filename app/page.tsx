@@ -56,74 +56,74 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Professional Desktop Navigation Dropdowns */}
+          {/* Professional Desktop Navigation with 'V' Dropdown Carets */}
           <div className="hidden lg:flex gap-8 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-600 items-center">
             
             {/* Collections */}
             <div className="relative group py-2">
-              <button className="hover:text-black flex items-center gap-1.5 transition-colors">
+              <Link href="/collections" className="hover:text-black flex items-center gap-1.5 transition-colors">
                 <span>Collections</span>
-                <span className="text-[10px] text-[#B5A48B] font-bold transition-transform duration-300 group-hover:rotate-90 inline-block">&gt;</span>
-              </button>
+                <span className="text-[10px] text-[#B5A48B] font-bold transition-transform duration-300 group-hover:rotate-180 inline-block">⌄</span>
+              </Link>
               <div className="absolute top-full left-0 w-60 bg-[#F9F7F2] border border-zinc-200 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 flex flex-col gap-2 px-4 z-50">
-                <a href="#collections" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Seasonal Favourites</a>
-                <a href="#jackets" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Signature Outerwear</a>
+                <Link href="/collections/seasonal" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Seasonal Favourites</Link>
+                <Link href="/collections/outerwear" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Signature Outerwear</Link>
               </div>
             </div>
 
             {/* Products */}
             <div className="relative group py-2">
-              <button className="hover:text-black flex items-center gap-1.5 transition-colors">
+              <Link href="/products" className="hover:text-black flex items-center gap-1.5 transition-colors">
                 <span>Products</span>
-                <span className="text-[10px] text-[#B5A48B] font-bold transition-transform duration-300 group-hover:rotate-90 inline-block">&gt;</span>
-              </button>
+                <span className="text-[10px] text-[#B5A48B] font-bold transition-transform duration-300 group-hover:rotate-180 inline-block">⌄</span>
+              </Link>
               <div className="absolute top-full left-0 w-60 bg-[#F9F7F2] border border-zinc-200 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 flex flex-col gap-2 px-4 z-50">
-                <a href="#collections" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Artisanal Footwear Series</a>
-                <a href="#jackets" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Exclusive Leather Shells</a>
+                <Link href="/products/footwear" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Artisanal Footwear Series</Link>
+                <Link href="/products/leather-shells" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Exclusive Leather Shells</Link>
               </div>
             </div>
 
             {/* Resources */}
             <div className="relative group py-2">
-              <button className="hover:text-black flex items-center gap-1.5 transition-colors">
+              <Link href="/resources" className="hover:text-black flex items-center gap-1.5 transition-colors">
                 <span>Resources</span>
-                <span className="text-[10px] text-[#B5A48B] font-bold transition-transform duration-300 group-hover:rotate-90 inline-block">&gt;</span>
-              </button>
+                <span className="text-[10px] text-[#B5A48B] font-bold transition-transform duration-300 group-hover:rotate-180 inline-block">⌄</span>
+              </Link>
               <div className="absolute top-full left-0 w-60 bg-[#F9F7F2] border border-zinc-200 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 flex flex-col gap-2 px-4 z-50">
-                <a href="#craft" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Master Craftsmanship</a>
-                <a href="#craft" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Sustainability & Sourcing</a>
+                <Link href="/resources/craft" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Master Craftsmanship</Link>
+                <Link href="/resources/sustainability" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Sustainability & Sourcing</Link>
               </div>
             </div>
 
             {/* Company */}
             <div className="relative group py-2">
-              <button className="hover:text-black flex items-center gap-1.5 transition-colors">
+              <Link href="/company" className="hover:text-black flex items-center gap-1.5 transition-colors">
                 <span>Company</span>
-                <span className="text-[10px] text-[#B5A48B] font-bold transition-transform duration-300 group-hover:rotate-90 inline-block">&gt;</span>
-              </button>
+                <span className="text-[10px] text-[#B5A48B] font-bold transition-transform duration-300 group-hover:rotate-180 inline-block">⌄</span>
+              </Link>
               <div className="absolute top-full left-0 w-60 bg-[#F9F7F2] border border-zinc-200 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 flex flex-col gap-2 px-4 z-50">
-                <a href="#about" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Brand Heritage</a>
-                <a href="#about" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Production Facility</a>
-                <a href="#about" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Global Vision</a>
+                <Link href="/company/heritage" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Brand Heritage</Link>
+                <Link href="/company/facility" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Production Facility</Link>
+                <Link href="/company/vision" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Global Vision</Link>
               </div>
             </div>
 
-            <a href="#contact" className="hover:text-black transition-colors py-2">Contact</a>
+            <Link href="#contact" className="hover:text-black transition-colors py-2">Contact</Link>
           </div>
         </div>
 
         <div className="flex items-center gap-4 md:gap-6">
-          <a href="#contact" className="hidden sm:block text-zinc-700 hover:text-black transition-colors">
+          <Link href="#contact" className="hidden sm:block text-zinc-700 hover:text-black transition-colors">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="cursor-pointer">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
-          </a>
-          <a href="#collections" className="hidden sm:block border border-[#B5A48B] px-5 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-[#B5A48B] hover:bg-[#B5A48B] hover:text-white transition-all duration-500">
+          </Link>
+          <Link href="#collections" className="hidden sm:block border border-[#B5A48B] px-5 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-[#B5A48B] hover:bg-[#B5A48B] hover:text-white transition-all duration-500">
             Explore
-          </a>
+          </Link>
           
-          {/* Professional Mobile Menu Button with Animated Custom Icon */}
+          {/* Mobile Menu Button */}
           <button 
             onClick={() => setMenuOpen(!menuOpen)} 
             className="lg:hidden flex items-center gap-2 bg-[#E3DFD5] border border-[#B5A48B]/40 px-3 py-1.5 text-zinc-800 rounded-sm hover:border-[#B5A48B] transition-all focus:outline-none"
@@ -140,44 +140,44 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Professional Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu */}
       {menuOpen && (
         <div className="lg:hidden bg-[#E9E9E9] border-b border-zinc-200 py-5 px-6 flex flex-col gap-4 text-[11px] font-medium uppercase tracking-[0.2em] text-zinc-600 sticky top-[65px] z-[99] shadow-lg max-h-[75vh] overflow-y-auto">
           
           <div className="flex flex-col gap-1.5">
-            <span className="text-[#B5A48B] font-bold text-[10px] tracking-[0.3em] flex items-center gap-1.5">
-              Collections <span className="text-[9px]">&gt;</span>
+            <span className="text-[#B5A48B] font-bold text-[10px] tracking-[0.3em] flex items-center justify-between">
+              Collections <span className="text-[10px]">⌄</span>
             </span>
-            <a href="#collections" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Seasonal Favourites</a>
-            <a href="#jackets" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Signature Outerwear</a>
+            <Link href="/collections/seasonal" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Seasonal Favourites</Link>
+            <Link href="/collections/outerwear" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Signature Outerwear</Link>
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <span className="text-[#B5A48B] font-bold text-[10px] tracking-[0.3em] flex items-center gap-1.5">
-              Products <span className="text-[9px]">&gt;</span>
+            <span className="text-[#B5A48B] font-bold text-[10px] tracking-[0.3em] flex items-center justify-between">
+              Products <span className="text-[10px]">⌄</span>
             </span>
-            <a href="#collections" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Artisanal Footwear Series</a>
-            <a href="#jackets" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Exclusive Leather Shells</a>
+            <Link href="/products/footwear" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Artisanal Footwear Series</Link>
+            <Link href="/products/leather-shells" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Exclusive Leather Shells</Link>
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <span className="text-[#B5A48B] font-bold text-[10px] tracking-[0.3em] flex items-center gap-1.5">
-              Resources <span className="text-[9px]">&gt;</span>
+            <span className="text-[#B5A48B] font-bold text-[10px] tracking-[0.3em] flex items-center justify-between">
+              Resources <span className="text-[10px]">⌄</span>
             </span>
-            <a href="#craft" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Master Craftsmanship</a>
-            <a href="#craft" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Sustainability & Sourcing</a>
+            <Link href="/resources/craft" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Master Craftsmanship</Link>
+            <Link href="/resources/sustainability" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Sustainability & Sourcing</Link>
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <span className="text-[#B5A48B] font-bold text-[10px] tracking-[0.3em] flex items-center gap-1.5">
-              Company <span className="text-[9px]">&gt;</span>
+            <span className="text-[#B5A48B] font-bold text-[10px] tracking-[0.3em] flex items-center justify-between">
+              Company <span className="text-[10px]">⌄</span>
             </span>
-            <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Brand Heritage</a>
-            <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Production Facility</a>
-            <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Global Vision</a>
+            <Link href="/company/heritage" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Brand Heritage</Link>
+            <Link href="/company/facility" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Production Facility</Link>
+            <Link href="/company/vision" onClick={() => setMenuOpen(false)} className="hover:text-black py-1 pl-3 border-l border-[#B5A48B]">Global Vision</Link>
           </div>
 
-          <a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-black py-2 border-t border-zinc-300 font-bold">Contact</a>
+          <Link href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-black py-2 border-t border-zinc-300 font-bold">Contact</Link>
         </div>
       )}
 
@@ -217,15 +217,15 @@ export default function Home() {
               Discover the art of every step.
             </p>
             <div className="flex flex-col items-center gap-4">
-              <a href="#collections" className="border border-white/20 text-white px-8 md:px-10 py-3 text-[9px] md:text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-700 backdrop-blur-sm">
+              <Link href="#collections" className="border border-white/20 text-white px-8 md:px-10 py-3 text-[9px] md:text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-700 backdrop-blur-sm">
                 Explore Collections
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </header>
 
-      {/* 3. FEATURED ARRIVALS (Equalized Box Heights & Compact Spacing) */}
+      {/* 3. FEATURED ARRIVALS */}
       <section id="collections" className="py-14 md:py-20 px-6 md:px-12 relative bg-[#F9F7F2] overflow-hidden scroll-mt-20">
         <div className="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-[0.06] py-12 select-none">
           <span className="text-[18vw] font-black tracking-tighter -ml-10 leading-none text-zinc-400">SEASONAL</span>
@@ -257,7 +257,6 @@ export default function Home() {
                       className="w-full h-full object-contain scale-[1.15] group-hover:scale-[1.35] transition-transform duration-500 mix-blend-multiply z-10" 
                     />
                   </div>
-                  {/* Fixed Equal Height Box Container */}
                   <div className="relative w-full h-24 p-4 border-t border-white/40 bg-white/10 backdrop-blur-[2px] z-30 flex flex-col justify-center space-y-1">
                     <h3 className="font-bold text-[10px] md:text-[11px] tracking-[0.15em] text-zinc-900 uppercase truncate">
                       {item.name}
@@ -307,7 +306,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PREMIUM JACKETS SECTION (Equalized Box Heights & jacket5.jpg / jacket6.jpg applied) */}
+      {/* PREMIUM JACKETS SECTION */}
       <section id="jackets" className="py-14 md:py-20 px-6 md:px-12 relative bg-[#EFECE6] text-zinc-900 overflow-hidden scroll-mt-20 border-t border-b border-zinc-200">
         <div className="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-[0.03] select-none py-12">
           <span className="text-[18vw] font-black tracking-tighter -ml-10 leading-none">PREMIUM</span>
@@ -344,7 +343,6 @@ export default function Home() {
                       }}
                     />
                   </div>
-                  {/* Fixed Equal Height Box Container */}
                   <div className="relative w-full h-24 p-4 bg-[#E3DFD5]/90 backdrop-blur-sm border-t border-white/60 z-30 flex flex-col justify-center space-y-1">
                     <h3 className="font-bold text-[10px] md:text-[11px] tracking-[0.15em] text-zinc-900 uppercase group-hover:text-[#B5A48B] transition-colors truncate">
                       {jacket.name}
@@ -360,7 +358,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. ABOUT US / HERITAGE SECTION (Refined for Outerwear & Jackets Context) */}
+      {/* 5. ABOUT US / HERITAGE SECTION */}
       <section id="about" className="bg-[#FDFCF9] py-14 md:py-20 px-6 md:px-12 relative overflow-hidden border-t border-zinc-100 scroll-mt-20">
         <div className="absolute top-10 right-10 opacity-[0.02] pointer-events-none select-none">
           <h2 className="text-[20vw] font-black leading-none uppercase tracking-tighter text-zinc-400">About <br /> Us</h2>
