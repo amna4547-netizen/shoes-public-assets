@@ -182,24 +182,24 @@ export default function Home() {
       )}
 
       {/* 2. HERO SECTION */}
-      <header className="relative h-[75vh] w-full overflow-hidden border-b border-zinc-200">
-        <div className="absolute inset-0 grid grid-cols-4 md:grid-cols-12 w-full h-full z-0">
-          <div className="col-span-4 relative h-full">
-            <Image src="/craft.jpg" alt="Craft" fill className="object-cover grayscale-[0.2]" unoptimized />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#111111]/60 to-[#111111]"></div>
-          </div>
-          <div className="hidden md:block md:col-span-4 bg-[#111111]"></div>
-          <div className="hidden md:block md:col-span-4 relative h-full">
-            <div className="absolute inset-0 z-10 bg-gradient-to-l from-transparent via-[#111111]/40 to-[#111111] pointer-events-none"></div>
-            <div className="flex-1 relative h-full border-b border-zinc-900">
-              <Image src="/model-1.jpg" alt="Model" fill className="object-cover" unoptimized />
-            </div>
-          </div>
+      <header className="relative h-[75vh] w-full overflow-hidden border-b border-zinc-200 bg-[#141414]">
+        {/* Full Background Clean Image */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <Image 
+            src="/frontpage.png" 
+            alt="Hero Frontpage" 
+            fill 
+            className="object-cover opacity-85" 
+            unoptimized 
+          />
+          {/* Subtle Dark Overlay to make text perfectly readable */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/80 via-[#111111]/40 to-[#111111]/30"></div>
         </div>
         
+        {/* Content Box */}
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center pointer-events-none px-4">
           <div className="w-full max-w-[95vw] text-center pointer-events-auto text-white">
-            <div className="text-3xl sm:text-4xl md:text-6xl lg:text-[5rem] font-medium leading-tight md:leading-[1.05] mb-4 tracking-tighter uppercase flex flex-col md:flex-row justify-center items-center gap-y-2 md:gap-x-4">
+            <div className="text-3xl sm:text-4xl md:text-6xl lg:text-[5rem] font-medium leading-tight md:leading-[1.05] mb-4 tracking-tighter uppercase flex flex-col md:flex-row justify-center items-center gap-y-2 md:gap-x-4 drop-shadow-md">
               <span>Defining Modern</span>
               <span className="text-[#B5A48B] min-h-[40px] sm:min-h-0"> 
                 <Typewriter
@@ -212,12 +212,12 @@ export default function Home() {
                 />
               </span>
             </div>
-            <p className="text-white/60 text-[10px] md:text-xs mb-8 font-sans max-w-xl mx-auto leading-relaxed italic uppercase tracking-[0.3em] md:tracking-[0.4em] px-2">
+            <p className="text-white/80 text-[10px] md:text-xs mb-8 font-sans max-w-xl mx-auto leading-relaxed italic uppercase tracking-[0.3em] md:tracking-[0.4em] px-2 drop-shadow">
               Curated collections for the urban explorer. <br className="hidden sm:block"/> 
               Discover the art of every step.
             </p>
             <div className="flex flex-col items-center gap-4">
-              <Link href="#collections" className="border border-white/20 text-white px-8 md:px-10 py-3 text-[9px] md:text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-700 backdrop-blur-sm">
+              <Link href="#collections" className="border border-white/30 text-white px-8 md:px-10 py-3 text-[9px] md:text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-700 backdrop-blur-md shadow-lg">
                 Explore Collections
               </Link>
             </div>
@@ -327,8 +327,8 @@ export default function Home() {
             {[
               { id: 1, name: "The Men's Leather Jackets", desc: "Classic Aviator Fit", img: "/jacket1.jpg", slug: "/Collections/bomber" },
               { id: 2, name: "The Cow Boy Jackets", desc: "Premium Velvet Touch", img: "/cow boy.jpg", slug: "/Collections/suede" },
-              { id: 3, name: "HERITAGE LEATHER JACKET", desc: "Pure Distressed Grain", img: "/jacket5.jpg", slug: "/Collections/leather" },
-              { id: 4, name: "WINTER Cow Women Jackets SHELL", desc: "Thermal Insulated Shield", img: "/jacket6.jpg", slug: "/Collections/parka" }
+              { id: 3, name: "HERITAGE LEATHER JACKET", desc: "Pure Distressed Grain", img: "/woman jacket10.jpg", slug: "/Collections/leather" },
+              { id: 4, name: "WINTER Cow Women Jackets SHELL", desc: "Thermal Insulated Shield", img: "/cow woman2.jpg", slug: "/Collections/parka" }
             ].map((jacket) => (
               <Link href={jacket.slug} key={jacket.id} className="group cursor-pointer flex flex-col h-full">
                 <div className="relative aspect-[3/4.5] w-full border border-zinc-300 transition-all duration-300 overflow-hidden bg-[#E3DFD5] shadow-sm group-hover:shadow-xl group-hover:border-[#B5A48B] flex flex-col justify-between">
@@ -413,7 +413,7 @@ export default function Home() {
             {/* Overlapping Secondary Image */}
             <div className="absolute -bottom-4 -left-2 md:-bottom-8 md:-left-6 w-1/2 aspect-square border-4 md:border-8 border-white shadow-xl z-20 overflow-hidden bg-white">
               <Image 
-                src="/jacket6.jpg" 
+                src="/jacket4.jpg" 
                 alt="Premium Outerwear Detail" 
                 fill 
                 className="object-cover hover:scale-110 transition-transform duration-700" 
