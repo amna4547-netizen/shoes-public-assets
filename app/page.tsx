@@ -220,12 +220,19 @@ export default function Home() {
               <Link href="#collections" className="border border-white/20 text-white px-8 md:px-10 py-3 text-[9px] md:text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-700 backdrop-blur-sm">
                 Explore Collections
               </Link>
+
+              {/* Moving Down Bounce Arrow */}
+              <div className="animate-bounce mt-2">
+                <svg width="24" height="40" viewBox="0 0 24 48" fill="none">
+                  <path d="M12 0V35M12 35L5 28M12 35L19 28" stroke="#B5A48B" strokeWidth="1.5" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </header>
-
-      {/* 3. FEATURED ARRIVALS (Exact Uniform Image Scaling) */}
+         
+      {/* 3. FEATURED ARRIVALS (Fixed Image Box Fitting) */}
       <section id="collections" className="py-14 md:py-20 px-6 md:px-12 relative bg-[#F9F7F2] overflow-hidden scroll-mt-20">
         <div className="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-[0.06] py-12 select-none">
           <span className="text-[18vw] font-black tracking-tighter -ml-10 leading-none text-zinc-400">SEASONAL</span>
@@ -250,15 +257,15 @@ export default function Home() {
             ].map((item) => (
               <Link href={item.slug} key={item.id} className="group cursor-pointer flex flex-col h-full">
                 <div className="relative aspect-[3/4.5] w-full border border-zinc-200 transition-all duration-300 overflow-hidden bg-[#E8E4D9] flex flex-col justify-between">
-                  {/* Uniform Image Height Container matching Cowboy Boot scale */}
-                  <div className="relative w-full h-[68%] flex items-center justify-center p-6">
+                  {/* Image container perfectly fitted inside box with controlled height and width */}
+                  <div className="relative w-full h-[65%] flex items-center justify-center p-4">
                     <img 
                       src={item.img} 
                       alt={item.name} 
-                      className="w-full h-full object-contain scale-[0.95] group-hover:scale-[1.1] transition-transform duration-500 mix-blend-multiply z-10" 
+                      className="w-full h-full object-contain max-h-[175px] group-hover:scale-105 transition-transform duration-500 mix-blend-multiply z-10" 
                     />
                   </div>
-                  <div className="relative w-full h-24 p-4 border-t border-white/40 bg-white/10 backdrop-blur-[2px] z-30 flex flex-col justify-center space-y-1">
+                  <div className="relative w-full h-[35%] p-4 border-t border-white/40 bg-white/10 backdrop-blur-[2px] z-30 flex flex-col justify-center space-y-1">
                     <h3 className="font-bold text-[10px] md:text-[11px] tracking-[0.15em] text-zinc-900 uppercase truncate">
                       {item.name}
                     </h3>
@@ -278,19 +285,32 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-full lg:w-1/3 h-full bg-[#F9F7F2] -z-10"></div>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-16 items-center">
           <div className="relative flex items-center h-[320px] md:h-[500px] w-full">
+            
+            {/* Main Primary Image */}
             <div className="relative w-[80%] h-full z-10 shadow-xl overflow-hidden border-4 border-white ml-4 md:ml-12">
               <img 
                 src="/pairs.png" 
-                alt="pair" 
+                alt="Pairs" 
                 className="w-full h-full object-cover" 
               />
             </div>
+
+            {/* Overlapping Secondary Image Box */}
             <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[42%] flex flex-col gap-4 z-20">
-              <div className="bg-[#D3CDC4]/95 backdrop-blur-md p-6 aspect-square flex flex-col justify-center items-center shadow-xl border border-white/50">
-                <span className="text-2xl md:text-3xl mb-2">craft.jpg</span>
-                <p className="text-[9px] md:text-[10px] uppercase font-black tracking-[0.2em] text-zinc-800 text-center leading-tight">Ethically <br/> Recycled</p>
+              <div className="bg-[#D3CDC4]/95 backdrop-blur-md p-2 aspect-square flex flex-col justify-between items-center shadow-xl border border-white/50 overflow-hidden relative group">
+                <div className="relative w-full h-[70%] overflow-hidden">
+                  <img 
+                    src="/craft.jpg" 
+                    alt="Craft Detail" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-[9px] md:text-[10px] uppercase font-black tracking-[0.2em] text-zinc-800 text-center leading-tight py-1">
+                  Ethically <br/> Recycled
+                </p>
               </div>
             </div>
+
           </div>
 
           <div className="space-y-6 lg:pl-8 text-center lg:text-left">
@@ -333,18 +353,18 @@ export default function Home() {
             ].map((jacket) => (
               <Link href={jacket.slug} key={jacket.id} className="group cursor-pointer flex flex-col h-full">
                 <div className="relative aspect-[3/4.5] w-full border border-zinc-300 transition-all duration-300 overflow-hidden bg-[#E3DFD5] shadow-sm group-hover:shadow-xl group-hover:border-[#B5A48B] flex flex-col justify-between">
-                  <div className="relative w-full h-[68%] flex items-center justify-center p-6">
+                  <div className="relative w-full h-[65%] flex items-center justify-center p-4">
                     <img 
                       src={jacket.img} 
                       alt={jacket.name} 
-                      className="w-full h-full object-contain scale-[0.95] group-hover:scale-[1.1] transition-transform duration-500 mix-blend-multiply z-10" 
+                      className="w-full h-full object-contain max-h-[175px] group-hover:scale-105 transition-transform duration-500 mix-blend-multiply z-10" 
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&auto=format&fit=crop&q=60";
                         (e.target as HTMLImageElement).className = "w-full h-full object-cover transition-transform duration-500";
                       }}
                     />
                   </div>
-                  <div className="relative w-full h-24 p-4 bg-[#E3DFD5]/90 backdrop-blur-sm border-t border-white/60 z-30 flex flex-col justify-center space-y-1">
+                  <div className="relative w-full h-[35%] p-4 bg-[#E3DFD5]/90 backdrop-blur-sm border-t border-white/60 z-30 flex flex-col justify-center space-y-1">
                     <h3 className="font-bold text-[10px] md:text-[11px] tracking-[0.15em] text-zinc-900 uppercase group-hover:text-[#B5A48B] transition-colors truncate">
                       {jacket.name}
                     </h3>
@@ -403,7 +423,7 @@ export default function Home() {
                 src="/jacket5.jpg" 
                 alt="Signature Leather Jacket Crafting" 
                 fill 
-                className="object-cover hover:scale-105 transition-transform duration-1000" 
+                className="object-cover hover:scale-105 transition-transform duration-800" 
                 unoptimized 
               />
             </div>
