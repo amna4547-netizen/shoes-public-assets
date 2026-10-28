@@ -223,7 +223,7 @@ export default function Home() {
 
               {/* Moving Down Bounce Arrow */}
               <div className="animate-bounce mt-2">
-                <svg width="24" height="40" viewBox="0 0 24 48" fill="none">
+                <svg width="24" height="55" viewBox="0 0 24 48" fill="none">
                   <path d="M12 0V35M12 35L5 28M12 35L19 28" stroke="#B5A48B" strokeWidth="1.5" />
                 </svg>
               </div>
@@ -258,11 +258,11 @@ export default function Home() {
               <Link href={item.slug} key={item.id} className="group cursor-pointer flex flex-col h-full">
                 <div className="relative aspect-[3/4.5] w-full border border-zinc-200 transition-all duration-300 overflow-hidden bg-[#E8E4D9] flex flex-col justify-between">
                   {/* Image container: full width with controlled height to sit nicely inside the box */}
-                  <div className="relative w-full h-[65%] flex items-center justify-center p-3">
+                  <div className="relative w-full h-[70%] flex items-center justify-center p-3">
                     <img 
                       src={item.img} 
                       alt={item.name} 
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply z-10" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply z-10" 
                     />
                   </div>
                   <div className="relative w-full h-[35%] p-4 border-t border-white/40 bg-white/10 backdrop-blur-[2px] z-30 flex flex-col justify-center space-y-1">
@@ -357,7 +357,7 @@ export default function Home() {
                     <img 
                       src={jacket.img} 
                       alt={jacket.name} 
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply z-10" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply z-10" 
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&auto=format&fit=crop&q=60";
                         (e.target as HTMLImageElement).className = "w-full h-full object-cover transition-transform duration-500";
