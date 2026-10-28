@@ -302,7 +302,7 @@ export default function Home() {
                   <img 
                     src="/craft.jpg" 
                     alt="Craft Detail" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                
