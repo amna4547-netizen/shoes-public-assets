@@ -232,7 +232,7 @@ export default function Home() {
         </div>
       </header>
          
-      {/* 3. FEATURED ARRIVALS (Fixed Image Box Fitting) */}
+      {/* 3. FEATURED ARRIVALS (Perfect Box Fitting with Balanced Image Scale) */}
       <section id="collections" className="py-14 md:py-20 px-6 md:px-12 relative bg-[#F9F7F2] overflow-hidden scroll-mt-20">
         <div className="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-[0.06] py-12 select-none">
           <span className="text-[18vw] font-black tracking-tighter -ml-10 leading-none text-zinc-400">SEASONAL</span>
@@ -257,12 +257,12 @@ export default function Home() {
             ].map((item) => (
               <Link href={item.slug} key={item.id} className="group cursor-pointer flex flex-col h-full">
                 <div className="relative aspect-[3/4.5] w-full border border-zinc-200 transition-all duration-300 overflow-hidden bg-[#E8E4D9] flex flex-col justify-between">
-                  {/* Image container perfectly fitted inside box with controlled height and width */}
-                  <div className="relative w-full h-[65%] flex items-center justify-center p-4">
+                  {/* Image container: full width with controlled height to sit nicely inside the box */}
+                  <div className="relative w-full h-[65%] flex items-center justify-center p-3">
                     <img 
                       src={item.img} 
                       alt={item.name} 
-                      className="w-full h-full object-contain max-h-[175px] group-hover:scale-105 transition-transform duration-500 mix-blend-multiply z-10" 
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply z-10" 
                     />
                   </div>
                   <div className="relative w-full h-[35%] p-4 border-t border-white/40 bg-white/10 backdrop-blur-[2px] z-30 flex flex-col justify-center space-y-1">
@@ -353,11 +353,11 @@ export default function Home() {
             ].map((jacket) => (
               <Link href={jacket.slug} key={jacket.id} className="group cursor-pointer flex flex-col h-full">
                 <div className="relative aspect-[3/4.5] w-full border border-zinc-300 transition-all duration-300 overflow-hidden bg-[#E3DFD5] shadow-sm group-hover:shadow-xl group-hover:border-[#B5A48B] flex flex-col justify-between">
-                  <div className="relative w-full h-[65%] flex items-center justify-center p-4">
+                  <div className="relative w-full h-[65%] flex items-center justify-center p-3">
                     <img 
                       src={jacket.img} 
                       alt={jacket.name} 
-                      className="w-full h-full object-contain max-h-[175px] group-hover:scale-105 transition-transform duration-500 mix-blend-multiply z-10" 
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply z-10" 
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&auto=format&fit=crop&q=60";
                         (e.target as HTMLImageElement).className = "w-full h-full object-cover transition-transform duration-500";
