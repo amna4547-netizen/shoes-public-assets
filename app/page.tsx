@@ -353,7 +353,7 @@ export default function Home() {
             ].map((jacket) => (
               <Link href={jacket.slug} key={jacket.id} className="group cursor-pointer flex flex-col h-full">
                 <div className="relative aspect-[3/4.5] w-full border border-zinc-300 transition-all duration-300 overflow-hidden bg-[#E3DFD5] shadow-sm group-hover:shadow-xl group-hover:border-[#B5A48B] flex flex-col justify-between">
-                  <div className="relative w-full h-[65%] flex items-center justify-center p-3">
+                  <div className="relative w-full h-[70%] flex items-center justify-center p-0">
                     <img 
                       src={jacket.img} 
                       alt={jacket.name} 
@@ -418,7 +418,7 @@ export default function Home() {
           </div>
           
           <div className="relative order-1 lg:order-2 max-w-md mx-auto lg:max-w-none w-full">
-            <div className="aspect-[3/4] w-full border-[8px] md:border-[12px] border-white shadow-2xl relative z-10 overflow-hidden bg-zinc-100">
+            <div className="aspect-[4/3] w-full border-[8px] md:border-[12px] border-white shadow-2xl relative z-10 overflow-hidden bg-zinc-100">
               <Image 
                 src="/jacket5.jpg" 
                 alt="Signature Leather Jacket Crafting" 
