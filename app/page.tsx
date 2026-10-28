@@ -298,11 +298,11 @@ export default function Home() {
             {/* Overlapping Secondary Image Box */}
             <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[42%] flex flex-col gap-4 z-20">
               <div className="bg-[#D3CDC4]/95 backdrop-blur-md p-2 aspect-square flex flex-col justify-between items-center shadow-xl border border-white/50 overflow-hidden relative group">
-                <div className="relative w-full h-[100%] overflow-hidden">
+                <div className="relative w-full h-[50%] overflow-hidden">
                   <img 
                     src="/craft.jpg" 
                     alt="Craft Detail" 
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                
