@@ -102,12 +102,12 @@ export default function Home() {
                 <span className="text-[10px] text-[#B5A48B] font-bold transition-transform duration-300 group-hover:rotate-180 inline-block">⌄</span>
               </Link>
               <div className="absolute top-full left-0 w-60 bg-[#F9F7F2] border border-zinc-200 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 flex flex-col gap-2 px-4 z-50">
-                    <Link href="/company/vision" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">About Us</Link>
-                <Link href="/company/heritage" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Brand Heritage</Link>
-                <Link href="/company/facility" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Production Facility</Link>
-                <Link href="/company/vision" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Global Vision</Link>
-                    <Link href="/company/our-journey" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Our Journey</Link>
-                        <Link href="/company/vision" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Our Facility</Link>
+                    <Link href="/Company/vision" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">About Us</Link>
+                <Link href="/Company/heritage" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Brand Heritage</Link>
+                <Link href="/Company/facility" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1 border-b border-zinc-200/50">Production Facility</Link>
+                <Link href="/Company/vision" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Global Vision</Link>
+                    <Link href="/Company/our-journey" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Our Journey</Link>
+                        <Link href="/Company/vision" className="text-[10px] tracking-widest text-zinc-700 hover:text-[#B5A48B] py-1">Our Facility</Link>
 
               </div>
             </div>
